@@ -1,0 +1,3 @@
+[submodule "TSMessages"]
+	path = TSMessages
+	url = git://github.com/toursprung/TSMessages
