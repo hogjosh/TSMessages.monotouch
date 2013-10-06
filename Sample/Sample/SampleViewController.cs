@@ -26,6 +26,9 @@ namespace Sample
 			
 			// Perform any additional setup after loading the view, typically from a nib.
 
+			// It's recommended to set a default view controller to present the messages.
+			TSMessage.DefaultViewController = this;
+
 			showButton.TouchUpInside += (object sender, EventArgs e) => {
 
 				// Show the TSMessage
