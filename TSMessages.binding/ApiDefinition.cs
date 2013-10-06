@@ -4,25 +4,26 @@ using MonoTouch.ObjCRuntime;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-
+/*
 namespace HexColors
 {
-	[Category, BaseType (typeof (UIColor))]
-	public partial interface HexColorAddition_UIColor {
+	[BaseType (typeof (NSObject))]
+	public partial interface HexColor {
 
 		[Static, Export ("colorWithHexString:")]
-		UIColor Color (string hexString);
+		UIColor ColorFromHexString (string hexString);
 
 		[Static, Export ("colorWithHexString:alpha:")]
-		UIColor Color (string hexString, float alpha);
+		UIColor ColorFromHexString (string hexString, float alpha);
 
 		[Static, Export ("colorWith8BitRed:green:blue:")]
-		UIColor Color (int red, int green, int blue);
+		UIColor ColorWith8Bit (int red, int green, int blue);
 
 		[Static, Export ("colorWith8BitRed:green:blue:alpha:")]
-		UIColor Color (int red, int green, int blue, float alpha);
+		UIColor ColorWith8Bit (int red, int green, int blue, float alpha);
 	}
 }
+*/
 
 namespace TSMessages
 {	
