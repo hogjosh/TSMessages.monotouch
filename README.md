@@ -9,4 +9,5 @@ Building
 ========
 
 1) Recursively clone this repository.
+
 2) Run `make' to build TSMessages.dll
