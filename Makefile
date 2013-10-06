@@ -23,7 +23,7 @@ libTSMessages.monotouch.a: libTSMessages.monotouch-i386.a libTSMessages.monotouc
 
 TSMessages.dll: libTSMessages.monotouch.a
 	$(MONOBUILD) /p:Configuration=Release $(MONO_PROJECT)
-	-mv $(MONO_PROJECT_ROOT)/bin/Release/TSMessages.binding.dll $(ROOT)/TSMessages.dll
+	-mv $(MONO_PROJECT_ROOT)/bin/Release/TSMessages.dll $(ROOT)
 
 clean:
 	-rm -rf build *.a *.dll *.mdb
