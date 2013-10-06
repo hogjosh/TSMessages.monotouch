@@ -4,10 +4,9 @@ using MonoTouch.ObjCRuntime;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace TSMessages
-{
-	public delegate void BlockCallback();
 
+namespace HexColors
+{
 	[Category, BaseType (typeof (UIColor))]
 	public partial interface HexColorAddition_UIColor {
 
@@ -23,6 +22,11 @@ namespace TSMessages
 		[Static, Export ("colorWith8BitRed:green:blue:alpha:")]
 		UIColor Color (int red, int green, int blue, float alpha);
 	}
+}
+
+namespace TSMessages
+{	
+	public delegate void BlockCallback();
 
 	[BaseType (typeof (UIView))]
 	public partial interface TSBlurView {
