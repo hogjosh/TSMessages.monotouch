@@ -8,7 +8,7 @@ XCODE_TARGET=TSMessages.monotouch
 MONO_PROJECT_ROOT=$(ROOT)/TSMessages.binding
 MONO_PROJECT=$(MONO_PROJECT_ROOT)/TSMessages.binding.csproj
 
-all: TSMessages.dll
+all: clean TSMessages.dll
 
 libTSMessages.monotouch-i386.a:
 	$(XBUILD) -project $(XCODE_PROJECT) -target $(XCODE_TARGET) -sdk iphonesimulator -configuration Release clean build
