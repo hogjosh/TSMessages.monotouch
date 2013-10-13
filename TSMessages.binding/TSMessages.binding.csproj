@@ -40,59 +40,6 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationBackgroundError.png">
-      <Link>Resources\NotificationBackgroundError.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationBackgroundError%402x.png">
-      <Link>Resources\NotificationBackgroundError%402x.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationBackgroundErrorIcon.png">
-      <Link>Resources\NotificationBackgroundErrorIcon.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationBackgroundErrorIcon%402x.png">
-      <Link>Resources\NotificationBackgroundErrorIcon%402x.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationBackgroundMessage.png">
-      <Link>Resources\NotificationBackgroundMessage.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationBackgroundMessage%402x.png">
-      <Link>Resources\NotificationBackgroundMessage%402x.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationBackgroundSuccess.png">
-      <Link>Resources\NotificationBackgroundSuccess.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationBackgroundSuccess%402x.png">
-      <Link>Resources\NotificationBackgroundSuccess%402x.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationBackgroundSuccessIcon.png">
-      <Link>Resources\NotificationBackgroundSuccessIcon.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationBackgroundSuccessIcon%402x.png">
-      <Link>Resources\NotificationBackgroundSuccessIcon%402x.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationBackgroundWarning.png">
-      <Link>Resources\NotificationBackgroundWarning.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationBackgroundWarning%402x.png">
-      <Link>Resources\NotificationBackgroundWarning%402x.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationBackgroundWarningIcon.png">
-      <Link>Resources\NotificationBackgroundWarningIcon.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationBackgroundWarningIcon%402x.png">
-      <Link>Resources\NotificationBackgroundWarningIcon%402x.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationButtonBackground.png">
-      <Link>Resources\NotificationButtonBackground.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\Images\NotificationButtonBackground%402x.png">
-      <Link>Resources\NotificationButtonBackground%402x.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\TSMessages\TSMessages\Resources\TSMessagesDefaultDesign.json">
-      <Link>Resources\TSMessagesDefaultDesign.json</Link>
-    </BundleResource>
-  </ItemGroup>
-  <ItemGroup>
     <ObjcBindingNativeLibrary Include="..\libTSMessages.monotouch.a">
       <Link>libTSMessages.monotouch.a</Link>
     </ObjcBindingNativeLibrary>
@@ -107,5 +54,58 @@
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\TSMessagesDefaultDesign.json">
+      <Link>Resources\TSMessagesDefaultDesign.json</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationBackgroundError.png">
+      <Link>Resources\NotificationBackgroundError.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationBackgroundError%402x.png">
+      <Link>Resources\NotificationBackgroundError%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationBackgroundErrorIcon.png">
+      <Link>Resources\NotificationBackgroundErrorIcon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationBackgroundErrorIcon%402x.png">
+      <Link>Resources\NotificationBackgroundErrorIcon%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationBackgroundMessage.png">
+      <Link>Resources\NotificationBackgroundMessage.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationBackgroundMessage%402x.png">
+      <Link>Resources\NotificationBackgroundMessage%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationBackgroundSuccess.png">
+      <Link>Resources\NotificationBackgroundSuccess.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationBackgroundSuccess%402x.png">
+      <Link>Resources\NotificationBackgroundSuccess%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationBackgroundSuccessIcon.png">
+      <Link>Resources\NotificationBackgroundSuccessIcon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationBackgroundSuccessIcon%402x.png">
+      <Link>Resources\NotificationBackgroundSuccessIcon%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationBackgroundWarning.png">
+      <Link>Resources\NotificationBackgroundWarning.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationBackgroundWarning%402x.png">
+      <Link>Resources\NotificationBackgroundWarning%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationBackgroundWarningIcon.png">
+      <Link>Resources\NotificationBackgroundWarningIcon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationBackgroundWarningIcon%402x.png">
+      <Link>Resources\NotificationBackgroundWarningIcon%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationButtonBackground.png">
+      <Link>Resources\NotificationButtonBackground.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\TSMessages.monotouch\TSMessages\TSMessages\Resources\Images\NotificationButtonBackground%402x.png">
+      <Link>Resources\NotificationButtonBackground%402x.png</Link>
+    </BundleResource>
   </ItemGroup>
 </Project>
