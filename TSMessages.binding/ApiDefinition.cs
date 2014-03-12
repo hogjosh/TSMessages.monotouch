@@ -1,29 +1,7 @@
 using System;
-using System.Drawing;
 using MonoTouch.ObjCRuntime;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-
-/*
-namespace HexColors
-{
-	[BaseType (typeof (NSObject))]
-	public partial interface HexColor {
-
-		[Static, Export ("colorWithHexString:")]
-		UIColor ColorFromHexString (string hexString);
-
-		[Static, Export ("colorWithHexString:alpha:")]
-		UIColor ColorFromHexString (string hexString, float alpha);
-
-		[Static, Export ("colorWith8BitRed:green:blue:")]
-		UIColor ColorWith8Bit (int red, int green, int blue);
-
-		[Static, Export ("colorWith8BitRed:green:blue:alpha:")]
-		UIColor ColorWith8Bit (int red, int green, int blue, float alpha);
-	}
-}
-*/
 
 namespace TSMessages
 {	
@@ -42,6 +20,9 @@ namespace TSMessages
 		[Static, Export ("sharedMessage")]
 		TSMessage SharedMessage { get; }
 
+		[Static, Export ("defaultViewController")]
+		UIViewController DefaultViewController { get; set; }
+
 		[Static, Export ("showNotificationWithTitle:type:")]
 		void ShowNotification (string message, TSMessageNotificationType type);
 
@@ -50,6 +31,12 @@ namespace TSMessages
 
 		[Static, Export ("showNotificationInViewController:title:subtitle:type:")]
 		void ShowNotification (UIViewController viewController, string title, string subtitle, TSMessageNotificationType type);
+
+		[Static, Export ("showNotificationInViewController:title:subtitle:type:duration:")]
+		void ShowNotification (UIViewController viewController, string title, string subtitle, TSMessageNotificationType type, double duration);
+
+		[Static, Export ("showNotificationInViewController:title:subtitle:type:duration:canBeDismissedByUser:")]
+		void ShowNotificationInViewController (UIViewController viewController, string title, string subtitle, TSMessageNotificationType type, double duration, bool dismissingEnabled);
 
 		[Static, Export ("showNotificationInViewController:title:subtitle:image:type:duration:callback:buttonTitle:buttonCallback:atPosition:canBeDismissedByUser:")]
 		void ShowNotification (UIViewController viewController, 
@@ -67,9 +54,6 @@ namespace TSMessages
 		[Static, Export ("dismissActiveNotification")]
 		bool DismissActiveNotification ();
 
-		[Static, Export ("defaultViewController")]
-		UIViewController DefaultViewController { get; set; }
-
 		[Static, Export ("addCustomDesignFromFileWithName:")]
 		void AddCustomDesignFromFile (string fileName);
 
@@ -81,6 +65,9 @@ namespace TSMessages
 
 		[Static, Export ("iOS7StyleEnabled")]
 		bool IOS7StyleEnabled { get; }
+
+		[Static, Export ("isNavigationBarInNavigationControllerHidden:")]
+		bool IsNavigationBarInNavigationControllerHidden (UINavigationController navController);
 	}
 
 	[Model, BaseType (typeof (NSObject))]

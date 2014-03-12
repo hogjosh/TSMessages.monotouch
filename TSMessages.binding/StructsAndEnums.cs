@@ -1,5 +1,3 @@
-using System;
-
 namespace TSMessages
 {
 	public enum TSMessageNotificationType {
