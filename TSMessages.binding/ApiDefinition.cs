@@ -24,32 +24,53 @@ namespace TSMessages
 		UIViewController DefaultViewController { get; set; }
 
 		[Static, Export ("showNotificationWithTitle:type:")]
-		void ShowNotification (string message, TSMessageNotificationType type);
+		void ShowNotification (
+			[NullAllowed] string message, 
+			TSMessageNotificationType type);
 
 		[Static, Export ("showNotificationWithTitle:subtitle:type:")]
-		void ShowNotification (string title, string subtitle, TSMessageNotificationType type);
+		void ShowNotification (
+			[NullAllowed] string title, 
+			[NullAllowed] string subtitle, 
+			TSMessageNotificationType type);
 
 		[Static, Export ("showNotificationInViewController:title:subtitle:type:")]
-		void ShowNotification (UIViewController viewController, string title, string subtitle, TSMessageNotificationType type);
+		void ShowNotification (
+			UIViewController viewController, 
+			[NullAllowed] string title, 
+			[NullAllowed] string subtitle, 
+			TSMessageNotificationType type);
 
 		[Static, Export ("showNotificationInViewController:title:subtitle:type:duration:")]
-		void ShowNotification (UIViewController viewController, string title, string subtitle, TSMessageNotificationType type, double duration);
+		void ShowNotification (
+			UIViewController viewController, 
+			[NullAllowed] string title, 
+			[NullAllowed] string subtitle, 
+			TSMessageNotificationType type, 
+			double duration = 1.5f);
 
 		[Static, Export ("showNotificationInViewController:title:subtitle:type:duration:canBeDismissedByUser:")]
-		void ShowNotification (UIViewController viewController, string title, string subtitle, TSMessageNotificationType type, double duration, bool dismissingEnabled);
+		void ShowNotification (
+			UIViewController viewController, 
+			[NullAllowed] string title, 
+			[NullAllowed] string subtitle, 
+			TSMessageNotificationType type, 
+			double duration = 1.5f, 
+			bool dismissingEnabled = true);
 
 		[Static, Export ("showNotificationInViewController:title:subtitle:image:type:duration:callback:buttonTitle:buttonCallback:atPosition:canBeDismissedByUser:")]
-		void ShowNotification (UIViewController viewController, 
-							   string title, 
-							   string subtitle, 
-							   UIImage image, 
-							   TSMessageNotificationType type, 
-							   double duration, 
-							   [BlockCallback] BlockCallback callback, 
-							   string buttonTitle, 
-							   [BlockCallback] BlockCallback buttonCallback, 
-							   TSMessageNotificationPosition messagePosition, 
-							   bool dismissingEnabled);
+		void ShowNotification (
+			UIViewController viewController, 
+			[NullAllowed] string title, 
+			[NullAllowed] string subtitle, 
+			[NullAllowed] UIImage image, 
+			TSMessageNotificationType type, 
+			double duration, 
+			[NullAllowed] [BlockCallback] BlockCallback callback, 
+			[NullAllowed] string buttonTitle, 
+			[NullAllowed] [BlockCallback] BlockCallback buttonCallback, 
+			TSMessageNotificationPosition messagePosition, 
+			bool dismissingEnabled = true);
 
 		[Static, Export ("dismissActiveNotification")]
 		bool DismissActiveNotification ();
@@ -101,18 +122,19 @@ namespace TSMessages
 		[Export ("delegate", ArgumentSemantic.Assign)]
 		TSMessageViewProtocol Delegate { get; set; }
 
-		[Export ("initWithTitle:subtitle:image:type:duration:inViewController:callback:buttonTitle:buttonCallback:atPosition:shouldBeDismissed:")]
-		IntPtr Constructor (string title, 
-							string subtitle, 
-							UIImage image, 
-							TSMessageNotificationType notificationType, 
-							float duration, 
-							UIViewController viewController, 
-							[BlockCallback] BlockCallback callback, 
-							string buttonTitle, 
-							[BlockCallback] BlockCallback buttonCallback, 
-							TSMessageNotificationPosition position, 
-							bool dismissAble);
+		[Export ("initWithTitle:subtitle:image:type:duration:inViewController:callback:buttonTitle:buttonCallback:atPosition:canBeDismissedByUser:")]
+		IntPtr Constructor (
+			[NullAllowed] string title, 
+			[NullAllowed] string subtitle, 
+			[NullAllowed] UIImage image, 
+			TSMessageNotificationType notificationType, 
+			float duration, 
+			UIViewController viewController, 
+			[NullAllowed] [BlockCallback] BlockCallback callback, 
+			[NullAllowed] string buttonTitle, 
+			[NullAllowed] [BlockCallback] BlockCallback buttonCallback, 
+			TSMessageNotificationPosition position, 
+			bool dismissingEnabled = true);
 
 		[Export ("fadeMeOut")]
 		void FadeMeOut ();
