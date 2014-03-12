@@ -36,7 +36,7 @@ namespace TSMessages
 		void ShowNotification (UIViewController viewController, string title, string subtitle, TSMessageNotificationType type, double duration);
 
 		[Static, Export ("showNotificationInViewController:title:subtitle:type:duration:canBeDismissedByUser:")]
-		void ShowNotificationInViewController (UIViewController viewController, string title, string subtitle, TSMessageNotificationType type, double duration, bool dismissingEnabled);
+		void ShowNotification (UIViewController viewController, string title, string subtitle, TSMessageNotificationType type, double duration, bool dismissingEnabled);
 
 		[Static, Export ("showNotificationInViewController:title:subtitle:image:type:duration:callback:buttonTitle:buttonCallback:atPosition:canBeDismissedByUser:")]
 		void ShowNotification (UIViewController viewController, 
