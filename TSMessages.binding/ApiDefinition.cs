@@ -91,12 +91,15 @@ namespace TSMessages
 		bool IsNavigationBarInNavigationControllerHidden (UINavigationController navController);
 	}
 
-	[Model, BaseType (typeof (NSObject))]
+	[BaseType (typeof (NSObject))]
+	[Model, Protocol]
 	public partial interface TSMessageViewProtocol {
 
 		[Export ("navigationbarBottomOfViewController:")]
 		float NavigationbarBottomOfViewController (UIViewController viewController);
 	}
+
+	public interface ITSMessageViewProtocol {}
 
 	[BaseType (typeof (UIView))]
 	public partial interface TSMessageView {
@@ -120,7 +123,7 @@ namespace TSMessages
 		bool MessageIsFullyDisplayed { get; set; }
 
 		[Export ("delegate", ArgumentSemantic.Assign)]
-		TSMessageViewProtocol Delegate { get; set; }
+		ITSMessageViewProtocol Delegate { get; set; }
 
 		[Export ("initWithTitle:subtitle:image:type:duration:inViewController:callback:buttonTitle:buttonCallback:atPosition:canBeDismissedByUser:")]
 		IntPtr Constructor (
